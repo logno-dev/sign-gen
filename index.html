@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Forager Sign Gen</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <img src="fp_logo.svg" width="300">
+
+  <div class="wrapper">
+
+    <form id="hold">
+      <h2>Hold Sign</h2>
+
+      <label>Reason:
+        <input type="text" name="reason" list="reasonList"></input>
+        <datalist id="reasonList">
+          <option value="New Labels"></option>
+          <option value="Quality Hold"></option>
+        </datalist>
+      </label>
+
+      <label>Issued By:
+        <input type="text" name="issued"></input>
+      </label>
+
+      <label>Pending:
+        <input type="text" name="pending" list="pendingList"></input>
+        <datalist id="pendingList">
+          <option value="QA Release"></option>
+          <option value="Label Transition"></option>
+        </datalist>
+      </label>
+
+      <label>Date:
+        <input type="date" id="date" class="today" name="date"></input>
+      </label>
+
+      <button type="submit">Submit</button>
+
+    </form>
+
+    <form id="extend">
+      <h2>Hold Sign</h2>
+
+      <label>Item Description:
+        <input type="text" name="desc"></input>
+      </label>
+
+      <label>Lot#:
+        <input type="text" name="lot"></input>
+      </label>
+
+      <label>Previous Expiration:
+        <input type="date" name="prevExp"></input>
+      </label>
+
+      <label>Extended Expiration:
+        <input type="date" name="extendedExp"></input>
+      </label>
+
+      <label>Approved By:
+        <input type="text" name="approved"></input>
+      </label>
+
+      <label>Date:
+        <input type="date" id="date" class="today" name="date"></input>
+      </label>
+
+      <button type="submit">Submit</button>
+
+    </form>
+
+  </div>
+
+</body>
+
+</html>
