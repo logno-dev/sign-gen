@@ -15,7 +15,7 @@ holdForm.addEventListener("submit", (e) => {
   for (const entry of data) {
     output.push(entry[1]);
   }
-  wrapper.innerHTML = `<h1>QA Hold</h1>
+  wrapper.innerHTML = `<h1 class="red">QA Hold</h1>
     <h3>Reason: ${output[0]}</h3>
     <h3>Issued By: ${output[1]}</h3>
     <h3>Pending: ${output[2]}</h3>
@@ -32,7 +32,7 @@ extendForm.addEventListener("submit", (e) => {
   for (const entry of data) {
     output.push(entry[1]);
   }
-  wrapper.innerHTML = `<h1>QA Hold</h1>
+  wrapper.innerHTML = `<h2 class="red title">Extended Expiration</h2>
     <h3>Item: ${output[0]}</h3>
     <h3>Lot#: ${output[1]}</h3>
     <h4>Prev Exp: ${new Date(output[2]).toLocaleDateString()}</h4>
