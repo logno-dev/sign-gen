@@ -19,7 +19,9 @@ holdForm.addEventListener("submit", (e) => {
     <h3>Reason: ${output[0]}</h3>
     <h3>Issued By: ${output[1]}</h3>
     <h3>Pending: ${output[2]}</h3>
-    <h5>Issued Date: ${new Date(output[3]).toLocaleDateString()}</h5>
+    <h5>Issued Date: ${new Date(
+    output[3] + "T12:00:00",
+  ).toLocaleDateString()}</h5>
     <button type="button" onclick="window.print()" class="hide-print" >Print</button>
   <button type="button" onclick="window.location.reload()" class="hide-print">New Form</button>
     `;
@@ -35,10 +37,14 @@ extendForm.addEventListener("submit", (e) => {
   wrapper.innerHTML = `<h2 class="red title">Extended Expiration</h2>
     <h3>Item: ${output[0]}</h3>
     <h3>Lot#: ${output[1]}</h3>
-    <h4>Prev Exp: ${new Date(output[2]).toLocaleDateString()}</h4>
-    <h4>Extended To: ${new Date(output[3]).toLocaleDateString()}</h4>
+    <h4>Prev Exp: ${new Date(output[2] + "T12:00:00").toLocaleDateString()}</h4>
+    <h4>Extended To: ${new Date(
+    output[3] + "T12:00:00",
+  ).toLocaleDateString()}</h4>
     <h3>Approved By: ${output[4]}</h3>
-    <h5>Issued Date: ${new Date(output[5]).toLocaleDateString()}</h5>
+    <h5>Issued Date: ${new Date(
+    output[5] + "T12:00:00",
+  ).toLocaleDateString()}</h5>
     <button type="button" onclick="window.print()" class="hide-print" >Print</button>
   <button type="button" onclick="window.location.reload()" class="hide-print">New Form</button>
     `;
