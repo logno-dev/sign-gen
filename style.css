@@ -69,4 +69,9 @@ button:hover {
   .hide-print {
     display: none;
   }
+
+  .pagebreak {
+    page-break-before: always;
+    margin-top: 5rem;
+  }
 }

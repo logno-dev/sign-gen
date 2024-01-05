@@ -10,9 +10,9 @@
 </head>
 
 <body>
-  <img src="fp_logo.svg" width="300">
 
   <div class="wrapper">
+    <img src="fp_logo.svg" width="300">
 
     <form id="hold">
       <h2>Hold Sign</h2>
@@ -36,6 +36,13 @@
           <option value="Label Transition"></option>
         </datalist>
       </label>
+
+      <label>Tag Prefix(A-Z):
+        <input type="text" name="prefix" maxlength="1" size="1" pattern="[a-z]|[A-Z]"></input></label>
+
+      <label>QTY:
+        <input type="number" name="qty" min="1" max="999" size="3" data-maxlength="3"
+          oninput="this.value=this.value.slice(0,this.dataset.maxlength)" value="1"></input></label>
 
       <label>Date:
         <input type="date" id="date" class="today" name="date"></input>
