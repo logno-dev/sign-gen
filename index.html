@@ -40,46 +40,48 @@
       <label>Tag Prefix(A-Z):
         <input type="text" name="prefix" maxlength="1" size="1" pattern="[a-z]|[A-Z]"></input></label>
 
-      <label>QTY:
+      <label>*QTY:
         <input type="number" name="qty" min="1" max="999" size="3" data-maxlength="3"
           oninput="this.value=this.value.slice(0,this.dataset.maxlength)" value="1"></input></label>
 
-      <label>Date:
-        <input type="date" id="date" class="today" name="date"></input>
+      <label>*Date:
+        <input type="date" id="date" class="today" name="date" required></input>
       </label>
 
       <button type="submit">Submit</button>
+      <small>*Required Field</small>
 
     </form>
 
     <form id="extend">
       <h2>Expiration Extension Sign</h2>
 
-      <label>Item Description:
-        <input type="text" name="desc"></input>
+      <label>*Item Description:
+        <input type="text" name="desc" required></input>
       </label>
 
-      <label>Lot#:
-        <input type="text" name="lot"></input>
+      <label>*Lot#:
+        <input type="text" name="lot" required></input>
       </label>
 
-      <label>Previous Expiration:
-        <input type="date" name="prevExp"></input>
+      <label>*Previous Expiration:
+        <input type="date" name="prevExp" required></input>
       </label>
 
-      <label>Extended Expiration:
-        <input type="date" name="extendedExp"></input>
+      <label>*Extended Expiration:
+        <input type="date" name="extendedExp" required></input>
       </label>
 
-      <label>Approved By:
-        <input type="text" name="approved"></input>
+      <label>*Approved By:
+        <input type="text" name="approved" required></input>
       </label>
 
-      <label>Date:
-        <input type="date" id="date" class="today" name="date"></input>
+      <label>*Date:
+        <input type="date" id="date" class="today" name="date" required></input>
       </label>
 
       <button type="submit">Submit</button>
+      <small>*Required Field</small>
 
     </form>
 

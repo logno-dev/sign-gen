@@ -37,9 +37,9 @@ holdForm.addEventListener("submit", (e) => {
     wrapper.innerHTML += `
   <img src="fp_logo.svg" width="300">
     <h1 class="red">QA Hold</h1>
-    <h3>Reason: ${output[0]}</h3>
-    <h3>Issued By: ${output[1]}</h3>
-    <h3>Pending: ${output[2]}</h3>
+    <h3>Reason: ${output[0] || "Quality"}</h3>
+    <h3>Issued By: ${output[1] || "QA Dept"}</h3>
+    <h3>Pending: ${output[2] || "QA Release"}</h3>
     <h3>Tag: ${tag + String(i).padStart(3, "0")}</h3>
     <h5>Issued Date: ${new Date(
       output[5] + "T12:00:00",
